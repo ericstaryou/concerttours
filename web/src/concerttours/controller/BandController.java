@@ -22,8 +22,8 @@ public class BandController
     public String showBands(final Model model)
     {
         final List<BandData> bands = bandFacade.getBands();
-        model.addAttribute("bands", bands);
-        return "BandList";
+        model.addAttribute("bands", bands); //data (model)
+        return "BandList"; //view
     }
     @RequestMapping(value = "/bands/{bandId}")
     public String showBandDetails(@PathVariable final String bandId, final Model model) throws UnsupportedEncodingException
